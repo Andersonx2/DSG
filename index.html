@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato Drogaria</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+
+
+
+
+    // Captura o clique e dispara o evento de pixel antes do redirecionamento
+    document.getElementById('whatsappLink').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Evento customizado – nome 'Contact' pode ser trocado para 'Lead' ou outro
+      fbq('track', 'Contact');
+console.log('Pixel disparado: Contact');
+    
+      // Pequeno delay para garantir envio do pixel antes do redirecionamento
+      setTimeout(function() {
+        window.location.href = e.currentTarget.href;
+      }, 100);
+    });
+
+
+
+
+
+
+
+
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '603904032657613');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=603904032657613&ev=PageView&noscript=1"
+    />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; font-family: Arial, sans-serif; }
+    /* Fundo degradê */
+    body {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      max-width: 320px;
+      width: 100%;
+    }
+    .logo {
+      margin-bottom: 1.5rem;
+    }
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+    .btn {
+      display: inline-block;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #1DA851;
+    }
+    .footer {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Espaço para logo da drogaria -->
+    <div class="logo">
+      <!-- Substitua 'logo.png' pelo caminho real da sua logo -->
+      <img src="/Carandai-logo.png" alt="Logo da Drogaria">
+    </div>
+
+    <!-- Botão de contato que dispara pixel e redireciona -->
+    <a
+      id="whatsappLink"
+      class="btn"
+      href="https://wa.me/553299553516?text=Gostaria%20de%20saber%20se%20voc%C3%AA%20tem%20o%20produto%20Elixpegador%20que%20estou%20procurando."
+    >
+      Falar no WhatsApp
+    </a>
+
+    <div class="footer">
+      Você será redirecionado ao WhatsApp em instantes...
+    </div>
+  </div>
+
+
+
+</body>
+</html>
